@@ -92,7 +92,6 @@ function colorModeToggle() {
     storagePreference === "true" ? goDark(true, false) : goDark(false, false);
   } else {
     checkPreference(colorPreference);
-//    goDark(false, false);
   }
 
   window.addEventListener("DOMContentLoaded", (event) => {
