@@ -65,11 +65,13 @@ function colorModeToggle() {
       localStorage.setItem("dark-mode", "true");
       htmlElement.classList.add("dark-mode");
       setColors(darkColors, animate);
+      document.documentElement.style.setProperty('--hero-opacity', '0%')
       togglePressed = "true";
     } else {
       localStorage.setItem("dark-mode", "false");
       htmlElement.classList.remove("dark-mode");
       setColors(lightColors, animate);
+      document.documentElement.style.setProperty('--hero-opacity', '100%')
       togglePressed = "false";
     }
     if (typeof toggleEl !== "undefined") {
